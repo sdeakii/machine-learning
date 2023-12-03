@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sphalerite_classifier</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sphalerite Classifier</h1>
+    <nav>
+      <ul>
+        <li><a href="#download">Download</a></li>
+        <li><a href="https://github.com/sdeakii/machine-learning">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="introduction">
+      <h2 id="introduction">A mineral deposit type classifier based on trace elements of sphalerite</h2>
+      <div class="self-introduction">
+        <h3 >Introduction</h3>
+        <p>please describe your software carefully!</p>
+      </div>
+      <div class="download">
+        <h3 id="download">Download</h3>
+        <li><a href="Sphalerite Classifier.xlsm" download>Sphalerite Classifier.xlsm</a></li>
+        <li><a href="学习曲线.jpg" download>学习曲线.jpg</a></li>
+        <li><a href="混淆矩阵.jpg" download>混淆矩阵.jpg</a></li>
+        <li><a href="特征重要性.jpg" download>特征重要性.jpg</a></li>
+      </div>
+    </section>
+    <section class="slideshow-container">
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="slide" style="background-image: url('学习曲线.jpg');"></div>
+      <div class="slide" style="background-image: url('混淆矩阵.jpg');"></div>
+      <div class="slide" style="background-image: url('特征重要性.jpg');"></div>
+      
+    </section>
+    <section class="footer">
+    </section>
+  </main>
+  <footer>
+    &copy; 2023 Qingwen Zeng
+  </footer>
+  <script>
+      (function() {
+          var currentIndex = 0;
+          var slides = document.querySelectorAll('.slide');
+          var dots = document.querySelectorAll('.dot');
+
+          function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+
+              dots.forEach(dot => dot.classList.remove('active'));
+              dots[index].classList.add('active');
+          }
+
+          dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => {
+                  currentIndex = index;
+                  showSlide(currentIndex);
+              });
+          });
+
+          function nextSlide() {
+              currentIndex = (currentIndex + 1) % slides.length;
+              showSlide(currentIndex);
+          }
+
+          setInterval(nextSlide, 10000); // 每10秒切换一次图片
+          showSlide(currentIndex); // 初始化显示第一张图片
+      })();
+  </script>
+</body>
+</html>
