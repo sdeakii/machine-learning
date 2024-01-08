@@ -62,7 +62,7 @@ header a:hover {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: black;
-  height: 100vh;
+/*   height: 100vh; */
 }
 .introduction h2 {
   font-size: xx-large;
