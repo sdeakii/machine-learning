@@ -26,20 +26,20 @@ header ul {
 /*   font-size: clamp(11px, 2vw, 24px); */
   font-size: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1150px) {
   h1 {
-    font-size: 25px;
+    font-size: 20px;
   }
   header ul{
-    font-size: 16px;
+    font-size: 15px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 2000px) {
   h1 {
-    font-size: 35px;
+    font-size: 40px;
   }
   header ul{
-    font-size: 24px;
+    font-size: 25px;
   }
 }
 header li {
