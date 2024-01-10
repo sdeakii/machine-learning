@@ -102,13 +102,13 @@ header a:hover {
 }
 
 /*image*/
-body, html {
+/* body, html {
   height: 100%;
   margin: 0;
-}
+} */
 .slideshow-container {
   width: 100vw;
-  height: 100vh;
+/*   height: 100vh; */
   overflow: hidden;
   position: relative;
 }
@@ -122,9 +122,21 @@ body, html {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (max-width: 1150px) {
+  .slide {
+    width: 95vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 .slide img {
-  max-width: 100%; /* 图片最大宽度为屏幕宽度 */
-  max-height: 100%; /* 图片最大高度为屏幕高度 */
+  max-width: 95vw; /* 图片最大宽度为屏幕宽度 */
+  max-height: 95vw; /* 图片最大高度为屏幕高度 */
 }
 .dots-container {
   text-align: center;
