@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sphalerite_classifier</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sphalerite Classifier</h1>
+    <nav>
+      <ul>
+        <li><a href="#download">Download</a></li>
+        <li><a href="https://github.com/sdeakii/machine-learning">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="introduction">
+      <h2 id="introduction">A mineral deposit type classifier based on trace elements of sphalerite</h2>
+      <div class="self-introduction">
+        <h3 >Introduction</h3>
+        <p>
+          The sphalerite classifier is a classifier trained on multiple machine learning algorithms to predict the type of mineral deposit based on 
+          the trace element composition of sphalerite. This program facilitates deposit genesis identification on computers lacking  a machine learning environment.
+        </p>
+        <p>
+          This program uses four machine learning algorithms: random forest, XGBoost, support vector machine (rbf kernel), decision tree, and linear PCA dimensionality reduction algorithm. 
+          Except for the decision tree, the accuracy of the other three machine learning algorithms is over 95%, and the accuracy of the decision tree algorithm is 92%. 
+          Due to the large number of parameters in the neural network algorithm, it is difficult to rewrite the algorithm, and the program does not include the neural network algorithm. 
+          For more details, please refer to Zeng et al., 2024.
+        </p>
+        <p>
+          It is best to use Excel versions 2019 and above for this program, as there may be compatibility issues with older versions of Excel.
+        </p>
+      </div>
+      <div class="download">
+        <h3 id="download">Download</h3>
+        <li><a href="Summary of sphalerite data.xlsx" download>Summary of sphalerite data.xlsx</a></li>
+        <li><a href="Sphalerite Classifier.xlsm" download>Sphalerite Classifier.xlsm</a></li>
+        <li><a href="Sphalerite Classifier.ipynb" download>Sphalerite Classifier.ipynb</a></li>
+      </div>
+    </section>
+    <section class="slideshow-container">
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="slide" style="background-image: url('figure/Data\ Distribution.png');"></div>
+      <div class="slide" style="background-image: url('figure/Violinplots.png');"></div>
+      <div class="slide" style="background-image: url('figure/Learning\ Curve.png');"></div>
+      <div class="slide" style="background-image: url('figure/Confusion\ Matrix.png');"></div>
+      <div class="slide" style="background-image: url('figure/Feature\ Importance.png');"></div>
+      
+    </section>
+    <section class="footer">
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 Qingwen Zeng
+  </footer>
+  <script>
+      (function() {
+          var currentIndex = 0;
+          var slides = document.querySelectorAll('.slide');
+          var dots = document.querySelectorAll('.dot');
+
+          function showSlide(index) {
+              slides.forEach(slide => slide.style.display = 'none');
+              slides[index].style.display = 'block';
+
+              dots.forEach(dot => dot.classList.remove('active'));
+              dots[index].classList.add('active');
+          }
+
+          dots.forEach((dot, index) => {
+              dot.addEventListener('click', () => {
+                  currentIndex = index;
+                  showSlide(currentIndex);
+              });
+          });
+
+          function nextSlide() {
+              currentIndex = (currentIndex + 1) % slides.length;
+              showSlide(currentIndex);
+          }
+
+          setInterval(nextSlide, 10000); // 每10秒切换一次图片
+          showSlide(currentIndex); // 初始化显示第一张图片
+      })();
+  </script>
+</body>
+</html>

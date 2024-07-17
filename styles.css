@@ -1,0 +1,165 @@
+/* styles.css */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+/*header*/
+header {
+  background-color: #231C1A;
+  height: 10vh;
+  width: 100vw;
+}
+h1 {
+  color: white;
+  position: absolute;
+  left: 5vw;
+  top:5vh;
+  line-height: 0;
+  font-size: 30px;
+}
+header ul {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  line-height: 0;
+  font-size: 20px;
+}
+@media screen and (max-width: 1150px) {
+  h1 {
+    font-size: 20px;
+  }
+  header ul{
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  h1 {
+    font-size: 40px;
+  }
+  header ul{
+    font-size: 25px;
+  }
+}
+
+header li {
+  display: inline;
+  margin-right: 2vw; 
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
+/*Introduction*/
+.introduction {
+  max-width: 80vw;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.introduction h2 {
+  font-size: xx-large;
+  line-height: 1.5em;
+  margin-bottom: 2vh;
+}
+.self-introduction h3 {
+  font-size:x-large;
+  position:relative;
+  left: 0;
+  top: 0;
+  line-height: 1.5em;
+  margin-bottom: 1vh;
+}
+.self-introduction p {
+  font-size:large;
+  text-indent: 4ch;
+  position: relative;
+  left: 0;
+  top: 0;
+  line-height: 1.5em;
+  margin-bottom: 1.5vh;
+}
+.download h3 {
+  font-size:x-large;
+  position: relative;
+  left: 0;
+  top: 0vh;
+  line-height: 1.5em;
+  margin-bottom: 1vh;
+}
+.download li{
+  position: relative;
+  left: 0;
+  top: 0vh;
+  line-height: 1.5em;
+}
+
+/*image*/
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.slideshow-container {
+  width: 100vw;
+  overflow: hidden;
+  text-align: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.slide {
+  width: 95vw;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1150px) {
+  .slide {
+    width: 94vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #969595;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.active {
+  background-color: #5e5454;
+}
+
+/*footer*/
+.footer {
+  background-color: #ffffff;
+  position: relative;
+  height: 10px;
+  width: 100vw;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
